@@ -19,9 +19,10 @@
 			</form>
 		</section>
 		
-		<section class="messages">
+		<section class="messages" id="msgs">
 			<ul id="messages" v-for="message in messages">
 				<newmessage :msg="message"></newmessage>
+				<p id="msgL"> </p>
 			</ul>
 		</section>		
 	</main>
