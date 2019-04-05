@@ -31,7 +31,9 @@ main {
   flex: 2;
   background-color: #eee;
   border: 6px solid #e2e0e0;
-  height: 100vh; }
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-behavior: smooth; }
 
 input, textarea {
   display: block;

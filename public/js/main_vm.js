@@ -16,6 +16,15 @@ function appendMessage(message) {
     vm.messages.push(message);
 }
 
+function updateScroll(){
+    var element = document.getElementById("msgs");
+    element.scrollTop = element.scrollHeight;
+}
+
+function scrollDelay(){
+    setTimeout(updateScroll, 100);
+}
+
 //create Vue instance
 const vm = new Vue({
     data: {
@@ -41,7 +50,9 @@ const vm = new Vue({
     }
 }).$mount(`#app`);
 
+
 socket.on('connected', logConnect);
 socket.addEventListener('chat message', appendMessage);
+socket.addEventListener('chat message', scrollDelay);
 socket.addEventListener('disconnect', appendMessage);
 socket.addEventListener('disconnect', logDisconnect);
