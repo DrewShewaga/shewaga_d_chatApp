@@ -17,6 +17,7 @@ main {
 	flex: 1; 
 	border: 6px solid #bfcfd6;
 	background-color: #e3edf1;
+	z-index: 10;
 
 	label { display: block; margin-bottom: 0.5rem; }
 }
@@ -24,7 +25,8 @@ main {
 .messages { 
 	flex: 2;
 	background-color: #eee;
-	border: 6px solid #e2e0e0; 
+	border: 6px solid #e2e0e0;
+	height: 100vh; 
 }
 
 input, textarea { 
@@ -38,7 +40,7 @@ input, textarea {
 	border-style: solid;
 }
 
-textarea { height: 135px; }
+textarea { height: 60vh; }
 
 
 
