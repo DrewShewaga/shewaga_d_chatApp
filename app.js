@@ -22,6 +22,8 @@ io.on('connection', function(socket){
     console.log('a user has connected');
 
     socket.emit('connected', {sID: `${socket.id}`, message: 'new connection'});
+    
+    // io.emit('chat message', { id: 'Chat-Bot', message: 'A new user has connected!'});
 
     socket.on('chat message', function(msg) {
         console.log('message: ', msg, 'socket:', socket.id);
