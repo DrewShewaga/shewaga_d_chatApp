@@ -78,7 +78,7 @@ form {
   float: left;
   clear: both;
   z-index: 2;
-  animation: messg .1s ease-in-out forwards !important; }
+  animation: mymessg 1s ease-in-out forwards !important; }
   .new-message span {
     font-size: 0.8rem;
     font-weight: bold;
@@ -90,24 +90,25 @@ form {
   float: right !important;
   background-color: #4581bd;
   color: white;
-  animation: mymessg .1s ease-in-out forwards !important; }
+  animation: mymessg 1s ease-in-out forwards !important; }
 
 @keyframes mymessg {
   0% {
-    position: absolute;
-    right: -150px; }
-  99% {
-    right: 12px;
-    position: absolute; }
+    margin-top: 80px;
+    opacity: 0;
+    transform: scale(0.2); }
+  20% {
+    opacity: 1;
+    transform: scale(1); }
   100% {
-    position: initial; } }
+    margin-top: 0px; } }
 @keyframes messg {
   0% {
-    position: absolute;
+    position: relative;
     left: -50px; }
   99% {
     left: 25vw;
-    position: absolute; }
+    position: relative; }
   100% {
     position: initial; } }
 

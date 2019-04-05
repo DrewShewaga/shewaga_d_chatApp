@@ -10,41 +10,42 @@
     float:left;
     clear: both;
     z-index: 2;
-    animation: messg .1s ease-in-out forwards !important;
+    animation: mymessg 1s ease-in-out forwards !important;
 }
 
 .my-message {
     float: right !important;
     background-color: rgb(69, 129, 189);
     color: white;
-    animation: mymessg .1s ease-in-out forwards !important;
+    animation: mymessg 1s ease-in-out forwards !important;
 }
 
 @keyframes mymessg{
     0%{
-        position: absolute;
-        right: -150px;
+        margin-top: 80px;
+        opacity: 0;
+        transform: scale(0.2);
     }
 
-    99%{
-        right: 12px;
-        position: absolute;
+    20%{
+        opacity: 1;
+        transform: scale(1);
     }
 
     100%{
-        position: initial;
+        margin-top: 0px;
     }
 }
 
 @keyframes messg{
     0%{
-        position: absolute;
+        position: relative;
         left: -50px;
     }
 
     99%{
         left: 25vw;
-        position: absolute;
+        position: relative;
     }
 
     100%{
