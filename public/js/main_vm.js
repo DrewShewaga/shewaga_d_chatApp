@@ -8,7 +8,7 @@ function logConnect({sID, message}) {
     socket.emit('chat message', { content: 'A new user has connected!', name: 'Chat Bot'});
 }
 
-function logDisconnect(){
+function logDisconnect({sID, message}){
     socket.emit('chat message', { content: 'A user has left the chat!', name: 'Chat Bot'});
 }
 
