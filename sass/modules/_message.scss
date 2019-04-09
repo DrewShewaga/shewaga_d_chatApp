@@ -3,7 +3,8 @@
 
     width: 28vw;
     padding: 8px 12px;
-    background-color: white; 
+    background-color: rgb(15, 15, 15);
+    color: #fff;
     border-radius: 8px;
     margin-bottom: 1rem;
     overflow-wrap: break-word;
@@ -15,7 +16,7 @@
 
 .my-message {
     float: right !important;
-    background-color: rgb(69, 129, 189);
+    background-color: rgb(97, 97, 97);
     color: white;
     animation: mymessg 1s ease-in-out forwards !important;
 }
@@ -34,21 +35,5 @@
 
     100%{
         margin-top: 0px;
-    }
-}
-
-@keyframes messg{
-    0%{
-        position: relative;
-        left: -50px;
-    }
-
-    99%{
-        left: 25vw;
-        position: relative;
-    }
-
-    100%{
-        position: initial;
     }
 }

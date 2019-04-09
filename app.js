@@ -34,6 +34,6 @@ io.on('connection', function(socket){
 
     socket.on('disconnect', function() {
         console.log('a user has disconnected');
-        io.emit('chat message', { content: 'A user has disconnected!', name: 'Chat Bot'});
+        socket.emit('chat message', { content: 'A user has disconnected!', name: 'Chat Bot'});
     });
 });

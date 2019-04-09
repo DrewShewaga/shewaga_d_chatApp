@@ -8,7 +8,7 @@ function logConnect({sID, message}) {
     socket.emit('chat message', { content: 'A new user has connected!', name: 'Chat Bot'});
 }
 
-function logDisconnect({sID, message}){
+function logDisconnect(){
     socket.emit('chat message', { content: 'A user has left the chat!', name: 'Chat Bot'});
 }
 
@@ -36,9 +36,10 @@ const vm = new Vue({
 
     methods: {
         dispatchMessage() {
+            if(this.message){
             // emit message event from the client side
-            socket.emit('chat message', { content: this.message, name: this.nickname || "Anonymous"});
-
+                socket.emit('chat message', { content: this.message, name: this.nickname || "Anonymous"});
+            }
             // reset the message field
             this.message = "";
 
