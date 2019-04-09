@@ -21,8 +21,9 @@ main {
 .form-container {
   flex: 1;
   border: 6px solid #bfcfd6;
-  background-color: #e3edf1;
-  z-index: 10; }
+  background-color: #616161;
+  z-index: 10;
+  color: #fff; }
   .form-container label {
     display: block;
     margin-bottom: 0.5rem; }
@@ -30,6 +31,10 @@ main {
 .messages {
   flex: 2;
   background-color: #eee;
+  background-image: url(../images/antarctic_bg.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   border: 6px solid #e2e0e0;
   height: 100vh;
   overflow-y: scroll;
@@ -42,7 +47,8 @@ input, textarea {
   border-radius: 4px;
   font-size: 0.8rem;
   padding: 0.4rem;
-  border-style: solid; }
+  border-style: solid;
+  background-color: #ccc; }
 
 textarea {
   height: 60vh; }
@@ -73,7 +79,8 @@ form {
 .new-message {
   width: 28vw;
   padding: 8px 12px;
-  background-color: white;
+  background-color: #0f0f0f;
+  color: #fff;
   border-radius: 8px;
   margin-bottom: 1rem;
   overflow-wrap: break-word;
@@ -90,7 +97,7 @@ form {
 
 .my-message {
   float: right !important;
-  background-color: #4581bd;
+  background-color: #616161;
   color: white;
   animation: mymessg 1s ease-in-out forwards !important; }
 
@@ -104,14 +111,5 @@ form {
     transform: scale(1); }
   100% {
     margin-top: 0px; } }
-@keyframes messg {
-  0% {
-    position: relative;
-    left: -50px; }
-  99% {
-    left: 25vw;
-    position: relative; }
-  100% {
-    position: initial; } }
 
 /*# sourceMappingURL=main.css.map */
