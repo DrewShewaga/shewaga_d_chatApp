@@ -40,7 +40,7 @@ main {
   overflow-y: scroll;
   scroll-behavior: smooth; }
 
-input, textarea {
+input, #textarea {
   display: block;
   width: 100%;
   border: 2px solid #bfcfd6;
@@ -50,22 +50,40 @@ input, textarea {
   border-style: solid;
   background-color: #ccc; }
 
-textarea {
-  height: 60vh; }
+#textarea {
+  height: 50vh; }
 
 form {
   padding: 3px;
   margin: 12px auto; }
   form input[type=submit] {
     width: auto;
-    padding: 10px;
-    background-color: #4bc811;
+    padding: 10px 30px;
+    background-color: #7e7e7e;
     margin-top: 1rem;
     border-radius: 8px;
     color: white;
     cursor: pointer;
     text-transform: uppercase;
     font-weight: bold; }
+
+.bgTitle {
+  font-weight: initial;
+  margin-bottom: 25px;
+  margin-top: 25px; }
+
+.bgOpt {
+  width: 18%;
+  height: 40px;
+  color: #fff;
+  background-color: #333;
+  border: none;
+  cursor: pointer;
+  margin-left: 1%;
+  transition: all .2s; }
+
+.bgOpt:hover {
+  background-color: #888; }
 
 #messages {
   list-style-type: none;

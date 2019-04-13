@@ -1,6 +1,39 @@
 import chatMessage from './modules/chatMessage.js';
 
 const socket = io();
+let chatArea = document.querySelector('.messages'),
+    bgForest = document.querySelector('#bgForest'),
+    bgArctic = document.querySelector('#bgArctic'),
+    bgOcean = document.querySelector('#bgOcean'),
+    bgDesert = document.querySelector('#bgDesert'),
+    bgCity = document.querySelector('#bgCity');
+    
+function changeForest(){
+    if (chatArea.style.backgroundImage == "url(../images/nature_bg.png)"){
+        console.log("background already selected");
+    }else{
+        chatArea.style.backgroundImage = "url(../images/nature_bg.png)";
+        console.log("background changed");
+    };
+}
+
+function changeArctic(){
+    if (chatArea.style.backgroundImage == "url(../images/antarctic_bg.png)"){
+        console.log("background already selected");
+    }else{
+        chatArea.style.backgroundImage = "url(../images/antarctic_bg.png)";
+        console.log("background changed");
+    };
+}
+
+
+// console.log('Client-side code running');
+
+// const button = document.getElementById('bgForest');
+// button.addEventListener('click', function(e) {
+//   console.log('button was clicked');
+// });
+
 
 function logConnect({sID, message}) {
     console.log(sID, message);
@@ -52,6 +85,13 @@ const vm = new Vue({
 }).$mount(`#app`);
 
 
+// bgForest.on('click', () => {
+//     console.log("background changed");
+// });
+
+
+bgForest.addEventListener("click", changeForest);
+bgArctic.addEventListener("click", changeArctic);
 socket.on('connected', logConnect);
 socket.addEventListener('chat message', appendMessage);
 socket.addEventListener('chat message', scrollDelay);

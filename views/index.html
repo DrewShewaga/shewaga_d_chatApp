@@ -14,9 +14,18 @@
 			
 			<form>
 				<label for="message">Something to say?</label>
-				<textarea v-model="message" class="message" type="text" autocomplete="off" id="textarea"></textarea>
-				<input type="submit" @click.prevent="dispatchMessage">
+				<textarea v-model="message" class="message" id="textarea"></textarea>
+				<input type="submit" value="Send Message" @click.prevent="dispatchMessage">
 			</form>
+
+			<div class="bgSelect">
+				<h3 class="bgTitle">Choose a background:</h3>
+				<button class="bgOpt" id="bgForest">Forest</button>
+				<button class="bgOpt" id="bgArctic">Arctic</button>
+				<button class="bgOpt" id="bgOcean">Ocean</button>
+				<button class="bgOpt" id="bgDesert">Desert</button>
+				<button class="bgOpt" id="bgCity">City</button>
+			</div>
 		</section>
 		
 		<section class="messages" id="msgs">

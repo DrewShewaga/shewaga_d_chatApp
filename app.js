@@ -37,3 +37,30 @@ io.on('connection', function(socket){
         socket.emit('chat message', { content: 'A user has disconnected!', name: 'Chat Bot'});
     });
 });
+
+// let chatArea = document.querySelector('.messages'),
+//     bgForest = document.querySelector('#bgForest'),
+//     bgArctic = document.querySelector('#bgArctic'),
+//     bgOcean = document.querySelector('#bgOcean'),
+//     bgDesert = document.querySelector('#bgDesert'),
+//     bgCity = document.querySelector('#bgCity');
+
+
+// function changeForest(){
+//     if (chatArea.style.backgroundImage == "url(../images/nature_bg.png)"){
+//         console.log("background already selected");
+//     }else{
+//         chatArea.style.backgroundImage = "url(../images/nature_bg.png)";
+//         console.log("background changed");
+//     };
+// }
+
+// function changeArctic(){
+//     if (chatArea.style.backgroundImage == "url(../images/antarctic_bg.png)"){
+//         console.log("background already selected");
+//     }else{
+//         chatArea.style.backgroundImage = "url(../images/antarctic_bg.png)";
+//         console.log("background changed");
+//     };
+// }
+

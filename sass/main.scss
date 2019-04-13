@@ -36,7 +36,7 @@ main {
 	scroll-behavior: smooth;
 }
 
-input, textarea { 
+input, #textarea { 
 	display: block; 
 	width: 100%;
 	border: 2px solid #bfcfd6;
@@ -48,7 +48,7 @@ input, textarea {
 	background-color: #ccc;
 }
 
-textarea { height: 60vh; }
+#textarea { height: 50vh; }
 
 
 
@@ -59,8 +59,8 @@ form {
 
 	input[type=submit] { 
 		width: auto; 
-		padding: 10px; 
-		background-color: rgb(75, 200, 17);
+		padding: 10px 30px; 
+		background-color: rgb(126, 126, 126);
 		margin-top: 1rem; 
 		border-radius: 8px;
 		color: white;
@@ -68,6 +68,27 @@ form {
 		text-transform: uppercase;
 		font-weight: bold;
 	}
+}
+
+.bgTitle{
+	font-weight: initial;
+	margin-bottom: 25px;
+	margin-top: 25px;
+}
+
+.bgOpt{
+	width: 18%;
+	height: 40px;
+	color: #fff;
+	background-color: #333;
+	border: none;
+	cursor: pointer;
+	margin-left: 1%;
+	transition: all .2s;
+}
+
+.bgOpt:hover{
+	background-color: #888;
 }
 
 #messages {
